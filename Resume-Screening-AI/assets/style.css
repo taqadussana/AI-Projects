@@ -1,0 +1,107 @@
+/* THEME V2 — Resume Screening AI Pro */
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
+
+:root {
+  --bg-deep: #0a0e1a;
+  --glass-fill: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --accent: #7c6fff;
+  --gold: #ffc857;
+  --silver: #c7d0dc;
+  --bronze: #e0995e;
+  --text-primary: #edeff7;
+  --text-muted: #8993ab;
+  --success: #5eead4;
+  --danger: #ff7a8a;
+}
+
+.stApp {
+  background: radial-gradient(circle at 15% 0%, #16213d 0%, var(--bg-deep) 45%),
+              radial-gradient(circle at 90% 90%, #12302b 0%, var(--bg-deep) 50%);
+}
+
+.stApp, .stApp * {
+  color: var(--text-primary) !important;
+}
+
+h1, h2, h3 { font-family: 'Sora', sans-serif !important; font-weight: 700 !important; }
+.mono-score { font-family: 'JetBrains Mono', monospace; }
+
+.glass-card {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 1.2rem 1.4rem;
+  backdrop-filter: blur(14px);
+}
+
+[data-testid="stFileUploaderDropzone"] {
+  background: var(--glass-fill) !important;
+  border: 1.5px dashed var(--glass-border) !important;
+  border-radius: 14px !important;
+}
+
+.stButton > button, .stDownloadButton > button {
+  background: linear-gradient(135deg, var(--accent), #5b4dff) !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  color: white !important;
+}
+
+[data-testid="stMetric"] {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+}
+
+[data-testid="stDataFrame"] {
+  border-radius: 14px;
+  border: 1px solid var(--glass-border);
+}
+
+.podium-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.6rem 0.5rem;
+  flex-wrap: wrap;
+}
+.podium-card {
+  width: 220px;
+  border-radius: 18px;
+  padding: 1.2rem 1rem;
+  text-align: center;
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+}
+.podium-card.rank-1 { order: 2; width: 250px; transform: translateY(-14px); border-color: var(--gold); }
+.podium-card.rank-2 { order: 1; }
+.podium-card.rank-3 { order: 3; }
+
+.rank-badge { font-size: 1.6rem; margin-bottom: 0.4rem; }
+.podium-name { font-family: 'Sora', sans-serif; font-weight: 700; margin-bottom: 0.6rem; }
+.podium-score { font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 1.8rem; }
+.rank-1 .podium-score { color: var(--gold) !important; }
+.rank-2 .podium-score { color: var(--silver) !important; }
+.rank-3 .podium-score { color: var(--bronze) !important; }
+.podium-score-label { color: var(--text-muted) !important; font-size: 0.7rem; text-transform: uppercase; }
+
+.podium-bar-track { width: 100%; height: 5px; border-radius: 4px; background: rgba(255,255,255,0.1); margin-top: 0.7rem; overflow: hidden; }
+.podium-bar-fill { height: 100%; }
+.rank-1 .podium-bar-fill { background: var(--gold); }
+.rank-2 .podium-bar-fill { background: var(--silver); }
+.rank-3 .podium-bar-fill { background: var(--bronze); }
+
+.pill-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.4rem; }
+.pill { font-size: 0.78rem; padding: 0.28rem 0.65rem; border-radius: 999px; border: 1px solid transparent; }
+.pill-matched { background: rgba(94, 234, 212, 0.12); color: var(--success) !important; border-color: rgba(94, 234, 212, 0.3); }
+.pill-missing { background: rgba(255, 122, 138, 0.10); color: var(--danger) !important; border-color: rgba(255, 122, 138, 0.28); }
+
+@media (max-width: 640px) {
+  .podium-wrap { flex-direction: column; align-items: center; }
+  .podium-card.rank-1, .podium-card.rank-2, .podium-card.rank-3 { order: initial; transform: none; width: 90%; }
+}
