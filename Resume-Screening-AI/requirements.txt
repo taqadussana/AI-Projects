@@ -1,0 +1,7 @@
+streamlit
+pandas
+plotly
+pdfplumber
+python-docx
+scikit-learn
+fpdf2
