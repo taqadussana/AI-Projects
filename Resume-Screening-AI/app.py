@@ -17,8 +17,19 @@ st.set_page_config(
     layout="wide"
 )
 
-with open("assets/style.css") as f:
-    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+# Load CSS safely
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSS_FILE = os.path.join(BASE_DIR, "assets", "style.css")
+
+st.write("Current directory:", os.getcwd())
+st.write("App directory:", BASE_DIR)
+st.write("CSS exists:", os.path.exists(CSS_FILE))
+
+with open(CSS_FILE, "r", encoding="utf-8") as f:
+    st.markdown(
+        f"<style>{f.read()}</style>",
+        unsafe_allow_html=True
+    )
 
 st.title("🤖 Resume Screening AI Pro")
 st.caption("AI-powered Resume Ranking System")
