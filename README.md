@@ -169,9 +169,8 @@ Add screenshots of:
 
 **Taqadus Sana**
 
-GitHub: https://github.com/taqadussana
-
-LinkedIn: *(taqadus-sana)*
+- GitHub: [@taqadussana](https://github.com/taqadussana)
+- LinkedIn: [Taqadus sana](https://linkedin.com/in/taqadus-sana)
 
 ---
 
